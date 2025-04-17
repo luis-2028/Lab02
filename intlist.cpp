@@ -93,9 +93,12 @@ int IntList::max() const {
 // returns average (arithmetic mean) of all values, or
 // 0 if list is empty
 double IntList::average() const {
+
     double total = sum();
     double amount = count();
-
+    if(head == nullptr && tail == nullptr){
+        return 0;
+    }
     return total / amount;
 }
 
